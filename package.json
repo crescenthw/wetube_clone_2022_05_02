@@ -17,7 +17,8 @@
   "homepage": "https://github.com/crescenthw/wetube-2022-05-02#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
@@ -25,5 +26,4 @@
     "@babel/preset-env": "^7.17.10",
     "nodemon": "^2.0.16"
   }
-  
 }
