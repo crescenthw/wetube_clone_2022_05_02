@@ -1,7 +1,7 @@
 extends base.pug
 
 block content 
-    div#videoContainer
+    div(data-id=video._id)#videoContainer
         video(src="/" + video.fileUrl, width="900", height="900")
         div#videoControls    
             button#play Play 
@@ -19,9 +19,12 @@ block content
     div
         p=video.description
         small=video.createdAt
+        br
+        small #{video.meta.views} Views
     div 
         small Uploaded by 
-            a(href=`/users/${video.owner._id}`) #{video.owner.name}     
+            a(href=`/users/${video.owner._id}`) #{video.owner.name}    
+            
     if String(video.owner._id) == String(loggedInUser._id)
         a(href=`${video.id}/edit`) Edit video &rarr;
         br
